@@ -1,4 +1,4 @@
-<?
+<?php
 /* AN IDEA...
      1. Collect the list of URLs to RSS feeds into an array.
      2. Download the content from that RSS's.
@@ -78,7 +78,7 @@ foreach ($feed as $feed_item => $item) {
   $title = shorten_text($item['title'], $MAX_TITLE_LENGTH);
   $text = shorten_text($item['description'], $MAX_TEXT_LENGTH);
 
-  print <<<END
+  echo <<<END
 <a href="$item[link]" target="_blank"><b>$title</b></a><br />
 <small><b>$item[source]</b> :: $time</small><br />
 $text</a><hr />
